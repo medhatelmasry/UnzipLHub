@@ -24,7 +24,8 @@ This is a console application that facilitates the extraction of files from D2L 
     },
     "Files": {
         // "DeleteFilesInTargetFirectory": "yes" | "no"
-        "DeleteFilesInTargetDirectory": "yes"
+        "DeleteFilesInTargetDirectory": "yes",
+        "CopyFileTypes": "html,xls,txt"
     }
 }
 ```
