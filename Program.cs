@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using UnzipLHub.Models;
@@ -22,6 +24,7 @@ namespace UnzipLHub
             var targetPath = Configuration["Directories:TargetPath"];
             var sortBy = Configuration["Sorting:SortBy"];
             var deleteFilesInTargetDirectory = Configuration["Files:DeleteFilesInTargetDirectory"];
+            var copyFileTypes = Configuration["Files:CopyFileTypes"];
 
             Console.WriteLine("UnzipLHub version 1.0.0");
 
@@ -32,6 +35,10 @@ namespace UnzipLHub
                 int result = Helper.DeleteAllFilesInFolder(targetPath);
                 if (result == -1) return;
             }
+
+            List<string> fileTypes = null;
+            if (!string.IsNullOrEmpty(copyFileTypes))
+                fileTypes = copyFileTypes.Split(',').ToList();
 
             string lastName;
 
@@ -83,25 +90,12 @@ namespace UnzipLHub
                 Console.WriteLine("Extracted {0}", zip);
             }
 
-            // copy any html files
-            string[] htmlFiles = Directory.GetFiles(sourcePath, "*.html");
-            foreach (var source in htmlFiles)
-            {
-                Helper.CopyFileToTarget(source, targetPath);
-            }
-
-            // copy any xls (Excel) files
-            string[] excelFiles = Directory.GetFiles(sourcePath, "*.xls");
-            foreach (var source in excelFiles)
-            {
-                Helper.CopyFileToTarget(source, targetPath);
-            }
-
-            // copy any txt files
-            string[] txtFiles = Directory.GetFiles(sourcePath, "*.txt");
-            foreach (var source in txtFiles)
-            {
-                Helper.CopyFileToTarget(source, targetPath);
+            foreach(var item in fileTypes) {
+                string[] htmlFiles = Directory.GetFiles(sourcePath, $"*.{item}");
+                foreach (var source in htmlFiles)
+                {
+                    Helper.CopyFileToTarget(source, targetPath);
+                }
             }
         }
 
