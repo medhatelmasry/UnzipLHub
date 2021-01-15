@@ -7,7 +7,7 @@ Application that facilitates the extraction of files in D2L (A.K.A. Learning Hub
 * app works with the current version of .NET, which happens to be .NET 5.0
 
 **Usage**
-1. Inside of B2L (Learning Hub), select multiple files then download onto your computer's file system
+1. Inside of D2L (Learning Hub), select multiple files then download onto your computer's file system
 2. Create source and target directories. Example: d:\work\src and d:\work\target
 3. Extract the file that you downloaded to the source directory
 4. Edit the configuration file name *appsettings.json*, which looks like this:
