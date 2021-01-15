@@ -12,7 +12,8 @@ Application that facilitates the extraction of files in D2L (A.K.A. Learning Hub
 3. Extract the file that you downloaded to the source directory
 4. Edit the configuration file name *appsettings.json*, which looks like this:
 
-`{
+```
+{
     "Directories": {
       "SourcePath": "D:\\work\\s",
       "TargetPath": "D:\\work\\t"
@@ -25,7 +26,8 @@ Application that facilitates the extraction of files in D2L (A.K.A. Learning Hub
         // "DeleteFilesInTargetFirectory": "yes" | "no"
         "DeleteFilesInTargetDirectory": "yes"
     }
-}`
+}
+```
   
 Note these configuration settings:
 
