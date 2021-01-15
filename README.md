@@ -1,12 +1,12 @@
 # UnzipLHub
 Application that facilitates the extraction of files in D2L (A.K.A. Learning Hub).
 
-**Disclaimer**
+### Disclaimer
 * application was developed at BCIT where student numbers are in the format of A00######.
 * app was developed and tested on Windows 10
 * app works with the current version of .NET, which happens to be .NET 5.0
 
-**Usage**
+### Usage
 1. Inside of D2L (Learning Hub), select multiple files then download onto your computer's file system
 2. Create source and target directories. Example: d:\work\src and d:\work\target
 3. Extract the file that you downloaded to the source directory
