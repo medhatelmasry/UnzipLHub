@@ -3,7 +3,7 @@ Application that facilitates the extraction of files in D2L (A.K.A. Learning Hub
 
 **Disclaimer**
 * application was developed at BCIT where student numbers are in the format of A00######.
-* app was developed and tested on Windows
+* app was developed and tested on Windows 10
 * app works with the current version of .NET, which happens to be .NET 5.0
 
 **Usage**
