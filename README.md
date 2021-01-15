@@ -31,12 +31,12 @@ Application that facilitates the extraction of files in D2L (A.K.A. Learning Hub
   
 Note these configuration settings:
 
-| Setting                      | Description                                                                                            |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------ |
-| Directories:SourcePath                   | directory that contains the files that were extracted from the D2L (Learning Hub) download             |
-| Directories:TargetPath                   | directory which the files will be extracted to                                                         |
-| Sorting:SortBy                       | sorting order that you wish the files to be extracted by. Your options are last-name or student-number |
-| Files:DeleteFilesInTargetDirectory | yes if you want files in the target directory to be deleted before the extraction process starts       |
+| Setting | Description |
+| ------- | ----------- |
+| Directories:SourcePath | directory that contains the files that were extracted from the D2L (Learning Hub) download |
+| Directories:TargetPath | directory which the files will be extracted to  |
+| Sorting:SortBy | Sorting order that you wish the files to be extracted by. Your options are *last-name* or *student-number* |
+| Files:DeleteFilesInTargetDirectory | *yes* if you want files in the target directory to be deleted before the extraction process starts |
 
 5. to run the application enter the following from a console window:
 
