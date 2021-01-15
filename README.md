@@ -42,3 +42,5 @@ Note these configuration settings:
 5. to run the application enter the following from a console window:
 
 dotnet run
+
+6. A log file is created in the filename format of yyyymmdd_log.txt.
