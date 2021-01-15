@@ -33,10 +33,10 @@ Note these configuration settings:
 
 | Setting                      | Description                                                                                            |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------ |
-| SourcePath                   | directory that contains the files that were extracted from the D2L (Learning Hub) download             |
-| TargetPath                   | directory which the files will be extracted to                                                         |
-| SortBy                       | sorting order that you wish the files to be extracted by. Your options are last-name or student-number |
-| DeleteFilesInTargetDirectory | yes if you want files in the target directory to be deleted before the extraction process starts       |
+| Directories:SourcePath                   | directory that contains the files that were extracted from the D2L (Learning Hub) download             |
+| Directories:TargetPath                   | directory which the files will be extracted to                                                         |
+| Sorting:SortBy                       | sorting order that you wish the files to be extracted by. Your options are last-name or student-number |
+| Files:DeleteFilesInTargetDirectory | yes if you want files in the target directory to be deleted before the extraction process starts       |
 
 5. to run the application enter the following from a console window:
 
