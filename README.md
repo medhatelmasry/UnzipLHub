@@ -1,5 +1,5 @@
 # UnzipLHub
-This is a console application that facilitates the extraction of files in D2L (A.K.A. Learning Hub).
+This is a console application that facilitates the extraction of files from D2L (A.K.A. Learning Hub).
 
 ### Disclaimer
 * application was developed at BCIT where student numbers are in the format of A00######.
