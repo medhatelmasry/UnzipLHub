@@ -37,6 +37,7 @@ Note these configuration settings:
 | Directories:TargetPath | directory which the files will be extracted to  |
 | Sorting:SortBy | Sorting order that you wish the files to be extracted by. Your options are *last-name* or *student-number* |
 | Files:DeleteFilesInTargetDirectory | *yes* if you want files in the target directory to be deleted before the extraction process starts |
+| Files:CopyFileTypes | file types that will be copied from source to destination directories (example: html,xls,txt) |
 
 5. to run the application enter the following from a console window:
 
