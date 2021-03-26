@@ -57,4 +57,6 @@ This will create a self containe exe file in the dist folder on Windows or osx
 
 On macOS, you need to grant execute rights by calling:
 
+```
 chmod a+x ./UnzipLHub
+```
