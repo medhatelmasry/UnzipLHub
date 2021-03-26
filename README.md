@@ -55,6 +55,6 @@ This will create a self containe exe file in the dist folder on Windows or osx
 | Windows x64 | dotnet publish -o dist --runtime win-x64 -p:PublishSingleFile=true --self-contained true |
 | macOS x64   | dotnet publish -o dist --runtime osx.10.11-x64 -p:PublishSingleFile=true --self-contained true |
 
-You need to grant the executable the rights to execute, by calling:
+On macOS, you need to grant the execute rights by calling:
 
 chmod a+x ./UnzipLHub
