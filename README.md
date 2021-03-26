@@ -50,5 +50,6 @@ dotnet run
 
 This will create a self containe exe file in the dist folder on Windows or osx
 
-dotnet publish -o dist --runtime win-x64 -p:PublishSingleFile=true --self-contained true
-dotnet publish -o dist --runtime osx.10.11-x64 -p:PublishSingleFile=true --self-contained true
+| Operating System | Self-contained publish command |
+| Windows x64 | dotnet publish -o dist --runtime win-x64 -p:PublishSingleFile=true --self-contained true |
+| macOS x64   | dotnet publish -o dist --runtime osx.10.11-x64 -p:PublishSingleFile=true --self-contained true |
