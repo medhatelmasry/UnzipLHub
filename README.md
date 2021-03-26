@@ -46,7 +46,7 @@ dotnet run
 
 6. A log file is created in the filename format of yyyymmdd_log.txt.
 
-### Creating a self-contained .exe file
+### Creating a self-contained executeable file
 
 This will create a self containe exe file in the dist folder on Windows or osx
 
