@@ -4,7 +4,7 @@ This is a console application that facilitates the extraction of files from D2L 
 ### Disclaimer
 * application was developed at BCIT where student numbers are in the format of A00######.
 * app was developed and tested on Windows 10 and macOS
-* app works with the current version of .NET, which happens to be .NET 5.0
+* app works with the current version of .NET, which happens to be .NET 6.0
 
 ### Usage
 1. Inside of D2L (Learning Hub), select multiple files then download onto your computer's file system
