@@ -12,11 +12,11 @@ var copyFileTypes = Configuration["Files:CopyFileTypes"];
 
 Console.WriteLine("UnzipLHub version 1.0.0");
 
-string[] zipFiles = Directory.GetFiles(sourcePath, "*.zip");
+string[] zipFiles = Directory.GetFiles(sourcePath!, "*.zip");
 
 if (deleteFilesInTargetDirectory != null && deleteFilesInTargetDirectory == "yes")
 {
-    int result = Helper.DeleteAllFilesInFolder(targetPath);
+    int result = Helper.DeleteAllFilesInFolder(targetPath!);
     if (result == -1) return;
 }
 
@@ -74,10 +74,11 @@ foreach (var zip in zipFiles)
     Console.WriteLine("Extracted {0}", zip);
 }
 
-foreach(var item in fileTypes!) {
-    string[] htmlFiles = Directory.GetFiles(sourcePath, $"*.{item}");
+foreach (var item in fileTypes!)
+{
+    string[] htmlFiles = Directory.GetFiles(sourcePath!, $"*.{item}");
     foreach (var source in htmlFiles)
     {
-        Helper.CopyFileToTarget(source, targetPath);
+        Helper.CopyFileToTarget(source, targetPath!);
     }
 }
