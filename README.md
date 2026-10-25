@@ -4,7 +4,7 @@ This is a console application that facilitates the extraction of files from D2L 
 ### Disclaimer
 * application was developed at BCIT where student numbers are in the format of A0#######.
 * app was developed and tested on Windows 10 and macOS
-* app works with the current version of .NET, which happens to be .NET 7.0
+* app targets .NET 10.0
 
 ### Usage
 1. Inside of D2L (Learning Hub), select multiple files, then download onto your computer's file system
@@ -53,10 +53,13 @@ This will create a self contained exe file in the dist folder on Windows or osx.
 | Operating System | Self-contained publish command |
 | ---------------- | ------------------------------ |
 | Windows x64 | dotnet publish -o dist --runtime win-x64 -p:PublishSingleFile=true --self-contained true |
-| macOS x64   | dotnet publish -o dist --runtime osx.10.11-x64 -p:PublishSingleFile=true --self-contained true |
+| macOS Intel (x64) | dotnet publish UnzipLHub.csproj -c Release -o dist --runtime osx-x64 -p:PublishSingleFile=true --self-contained true |
+| macOS Apple Silicon (ARM64) | dotnet publish UnzipLHub.csproj -c Release -o dist --runtime osx-arm64 -p:PublishSingleFile=true --self-contained true |
 
-On macOS, you need to grant execute rights by calling:
+Choose the macOS runtime for the machine that will run the executable: `osx-arm64` for Apple Silicon or `osx-x64` for Intel. Running an Intel executable on Apple Silicon without Rosetta can produce a "bad CPU type in executable" error; publish for `osx-arm64` to run natively.
+
+On macOS, if execute permission is missing, grant it from the project directory:
 
 ```
-chmod a+x ./zinic
+chmod a+x ./dist/zinic
 ```
